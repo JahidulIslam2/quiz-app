@@ -1,23 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Blog from '../blog/Blog';
 
 const Banner = () => {
     return (
-        <div>
-           <div className="p-6 py-32 bg-gray-400 text-white rounded h-96 ">
-	<div className="container mx-auto py-72">
-		<div className="flex flex-col lg:flex-row items-center justify-between ">
-			<h2 className="text-center text-6xl tracking-tighter font-bold">Up to
-				<br className="sm:hidden"/>50% Off
-			</h2>
-			<div className="space-x-2 text-center py-2 lg:py-0">
-				<span>Plus free shipping! Use code:</span>
-				<span className="font-bold text-lg">MAMBA</span>
-			</div>
-			<Link href="#" className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Shop Now</Link>
-		</div>
-	</div>
-</div>
+        <div className='bg-slate-500'>
+              
+              <div className="w-full h-96 bg-cover bg-center rounded shadow-md" style={{backgroundImage:'url(picture/world.jpg)'}}>
+        <div className="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+            <div className="text-center">
+                <h1 className="text-white text-2xl font-semibold uppercase md:text-3xl">Improve Your Programming Knowledge <span className="underline text-green-500">Find Solution </span></h1>
+                <p className='text-white'>Our site Specifically for programmers.Find Your solution on our page.</p>
+
+                <button className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-700 active:text-slate-900">Go Blog page......</button>
+            </div>
+        </div>
+    </div>
+    <Blog></Blog>
         </div>
     );
 };
