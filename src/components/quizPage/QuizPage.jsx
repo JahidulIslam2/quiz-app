@@ -1,13 +1,13 @@
-// import React from 'react';
+import React from 'react';
 
-// const QuizPage = ({ques}) => {
-//     const {correctAnswer,question,id,options}=ques;
-//     console.log(correctAnswer)
-//     return (
-//         <div>
+const QuizPage = ({ques}) => {
+    const {correctAnswer,question,id,options}=ques;
+    console.log(correctAnswer)
+    return (
+        <div>
         
-//         </div>
-//     );
-// };
+        </div>
+    );
+};
 
-// export default QuizPage;
+export default QuizPage;
