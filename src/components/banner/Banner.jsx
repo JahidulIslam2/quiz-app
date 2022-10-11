@@ -1,10 +1,6 @@
-import React, { createContext } from 'react';
-import Blog from '../blog/Blog';
+import React from 'react';
 
-export const itemsContext=createContext({}); 
-
-const Banner = ({items}) => {
-    // console.log(items)
+const Banner = () => {
     
     return (
         <div className='bg-slate-500'>
@@ -19,11 +15,7 @@ const Banner = ({items}) => {
             </div>
         </div>
     </div>
-    <itemsContext.Provider value={items}>
-            
-            <Blog></Blog>
 
-    </itemsContext.Provider>
         </div>
     );
 };
