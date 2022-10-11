@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div>
             
-<div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div className="max-w-sm bg-orange-600 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt=""/>
 
