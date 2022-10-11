@@ -2,8 +2,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from './root/Root';
 import Error from './error/Error';
-import Blog from './components/blog/Blog';
-import Banner from './components/banner/Banner';
+import Home from './components/home/Home';
 function App() {
   const routes=createBrowserRouter([
     {path: '/',
@@ -12,11 +11,11 @@ function App() {
      children:[
       {
         path:'/',
-        element:<Banner></Banner>
+        loader: ()=> fetch(`https://openapi.programming-hero.com/api/quiz`),
+        element: <Home></Home>
+        
       },
-     {path:'/',
-    element: <Blog></Blog>}
-    
+     
      ]
     },
     
