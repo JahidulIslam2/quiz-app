@@ -5,17 +5,24 @@ import Error from './error/Error';
 import Home from './components/home/Home';
 import Quiz from './components/quiz/Quiz';
 import Blog from './components/blog/Blog';
+import { getLoader } from './components/loader/Loader';
 function App() {
   const routes=createBrowserRouter([
     {path: '/',
      element:<Root></Root>,
+    //  loader:getLoader,
      errorElement: <Error/>,
      children:[
       {
-        path:'/',
+        path:'/home',
         loader: ()=> fetch(`https://openapi.programming-hero.com/api/quiz`),
         element: <Home></Home>
         
+      },
+      {
+          path:'/',
+          loader: ()=> fetch(`https://openapi.programming-hero.com/api/quiz`),
+          element:<Home></Home>
       },
       {
         path:'/quiz:id',
