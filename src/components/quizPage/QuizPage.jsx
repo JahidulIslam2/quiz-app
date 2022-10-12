@@ -1,5 +1,7 @@
 import React from 'react';
 import QuizSolution from '../quizsolution/QuizSolution';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const QuizPage = ({ ques}) => {
 
@@ -9,7 +11,7 @@ const QuizPage = ({ ques}) => {
 
             <section className="p-6">
                 <div className="container mx-50%">
-                    <h2 className="text-9xl font-bold text-center text-gray-50 bg-stone-600"> {question}</h2>
+                    <h2 className="text-9xl font-bold text-center text-gray-50 bg-stone-600"> {question}</h2> <button ><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button>
                     
                                 {
                                     options.map(p => <QuizSolution quiz={p} 
