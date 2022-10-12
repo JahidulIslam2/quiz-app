@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const QuizSolution = ({ quiz,correctAnswer }) => {
@@ -21,16 +20,10 @@ const QuizSolution = ({ quiz,correctAnswer }) => {
         else{
             alert('false')
         }
-        <ToastContainer/>
+     
 
     }
 
-    // const showToastMessage = () => {
-    //     toast.success('Complete Activity..', {
-    //         position: toast.POSITION.TOP_RIGHT
-    //     });
-    // };
-    
 
     return (
         <div>

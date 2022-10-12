@@ -2,8 +2,19 @@ import React from 'react';
 import QuizSolution from '../quizsolution/QuizSolution';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuizPage = ({ ques}) => {
+
+
+    
+    const showToastMessage = () => {
+        toast.success(`${correctAnswer}`, {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
+    
 
     const { correctAnswer, question, id, options } = ques;
     return (
@@ -11,7 +22,9 @@ const QuizPage = ({ ques}) => {
 
             <section className="p-6">
                 <div className="container mx-50%">
-                    <h2 className="text-9xl font-bold text-center text-gray-50 bg-stone-600"> {question}</h2> <button ><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button>
+                    <h2 className="text-9xl font-bold text-center text-gray-50 bg-stone-600"> {question}</h2> <button onClick={showToastMessage}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button><ToastContainer/>
+
+                    
                     
                                 {
                                     options.map(p => <QuizSolution quiz={p} 
