@@ -24,8 +24,6 @@ const QuizPage = ({ ques}) => {
                 <div className="container mx-50%">
                     <h2 className="text-9xl font-bold text-center text-gray-50 bg-stone-600"> {question}</h2> <button onClick={showToastMessage}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button><ToastContainer/>
 
-                    
-                    
                                 {
                                     options.map(p => <QuizSolution quiz={p} 
                                         key={id}
